@@ -15,7 +15,7 @@ get '/' do
   haml :index
 end
 
-post '/add' do
+post '/' do
   BOOKMARKS.add(params['url']);
   @bookmarks = BOOKMARKS.get_all();
   haml :index
