@@ -1,0 +1,11 @@
+#logo Read Later
+#message= @message
+%form{:action=>'/add', :methods=>'post'}
+	%span url:	
+	%input{:type=>'text', :value=>'', :name=>'url'}
+	%input{:type=>'submit', :value=>'add'}
+
+#bookmarks
+	- @bookmarks.each do |bookmark|
+		.bookmark
+			%a{:href=>bookmark}= bookmark
