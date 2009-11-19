@@ -18,10 +18,19 @@ get '/' do
 end
 
 post '/' do
-  p params  
   if !params[:url].empty?
     BOOKMARKS.add(params[:url])
   end
-  
   redirect '/'
+end
+
+get '/remove' do
+  if !params[:url].empty?
+    BOOKMARKS.remove(params[:url])     
+  end
+  redirect '/'
+end
+
+get '/removeall' do
+  BOOKMARKS.removeall()
 end

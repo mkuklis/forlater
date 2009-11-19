@@ -8,4 +8,6 @@
 #bookmarks
 	- @bookmarks.each do |bookmark|
 		.bookmark
-			%a{:href=>bookmark}= bookmark
+			%a{:class=>'url', :href=>bookmark}= bookmark
+			%a{:class=>'remove', :href=>'/remove?url=' + bookmark}
+				%img{:src=>'images/trash.png'}	

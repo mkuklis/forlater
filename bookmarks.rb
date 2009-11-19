@@ -12,12 +12,24 @@ class Bookmarks
   end
   
   def add(value)
-    @db.push_head 'bookmarks', value
-    # "puts
+    @db.push_head 'bookmarks', fix_link(value)
   end
   
-  def remove(index)
-    @db.list_trim 'bookmarks', index-1, index
+  def remove(value)
+    @db.list_rm 'bookmarks', 1, value
+  end
+  
+  def removeall()
+    @db.list_trim 'bookmarks', 1, -1  
+  end    
+
+  private
+  
+  def fix_link(link)
+    if link.match(/http:\/\/|https:\/\//).nil?
+      link = 'http://' << link
+    end
+    link
   end
 
 end
