@@ -16,8 +16,8 @@ get '/' do
 end
 
 post '/' do
-  if !params[:url].nil?
-    BOOKMARKS.add(params['url']);
+  if !params[:url].empty?
+    BOOKMARKS.add(params[:url]);
   end
   
   redirect '/'
