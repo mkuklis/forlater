@@ -16,7 +16,7 @@ get '/' do
 end
 
 post '/' do
-  if (params[:url].nil?
+  if !params[:url].nil?
     BOOKMARKS.add(params['url']);
   end
   
