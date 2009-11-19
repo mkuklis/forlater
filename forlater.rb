@@ -18,5 +18,5 @@ end
 post '/' do
   BOOKMARKS.add(params['url']);
   @bookmarks = BOOKMARKS.get_all();
-  haml :index
+  redirect '/'
 end
