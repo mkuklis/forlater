@@ -13,7 +13,7 @@ class Bookmarks
   
   def add(value)
     @db.push_head 'bookmarks', value
-    puts      
+    # "puts
   end
   
   def remove(index)
