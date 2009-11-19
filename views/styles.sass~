@@ -30,7 +30,7 @@ body
       padding: 5px
       a.url
         +action-link(355px)
-        overflow: hidden
+        overflow: hide
       a.remove
         +action-link(32px)    
         img

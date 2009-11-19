@@ -7,4 +7,4 @@
       = yield
     #footer
       %span Powered by 
-      %img{:src=>'images/heroku.png'}
+       %img{:src=>'images/heroku.png'}

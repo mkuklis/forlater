@@ -11,3 +11,7 @@
 			%a{:class=>'url', :href=>bookmark}= bookmark
 			%a{:class=>'remove', :href=>'/remove?url=' + bookmark}
 				%img{:src=>'images/trash.png'}
+
+#footer
+	#header-content
+		%img{:src=>'images/heroku.png'}
