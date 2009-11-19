@@ -16,7 +16,9 @@ get '/' do
 end
 
 post '/' do
-  BOOKMARKS.add(params['url']);
-  @bookmarks = BOOKMARKS.get_all();
+  if (params[:url].nil?
+    BOOKMARKS.add(params['url']);
+  end
+  
   redirect '/'
 end
