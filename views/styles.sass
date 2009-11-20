@@ -3,33 +3,49 @@
   display: block
   float: left
 
+=reset
+  :margin 0
+  :padding 0
+  :border 0
+  :outline 0
+  :font-size 100%
+  :vertical-align baseline
+  :background transparent
+
+html
+  +reset
 body
-  a 
-    color: #3F4C6B
+  +reset
+  a
+    color: #29264D
     &:hover
       color: #B02B2C
   input
-    font-size: 20px
-  
-  #logo
     font-size: 25px
-    text-align: center
-    font-family: Arial
-
+  #header
+    background-color: #29264D
+    height: 40px
+    #logo
+      font-size: 25px
+      font-family: arial,helvetica,sans-serif
+      color: #fff
+      padding: 5px
   #container
-    width: 400px
-    margin: 0 auto  
-    
+    margin: 15px auto
+    width: 550px
+    #url
+      font-size: 35px
   #bookmarks
     background-color: #fff
+    margin-top: 20px
     .bookmark
       border-bottom: 1px dashed #777
-      font-size: 20px
-      width: 390px
+      font-size: 30px
+      width: 490px
       float: left
       padding: 5px
       a.url
-        +action-link(355px)
+        +action-link(455px)
         overflow: hidden
       a.remove
         +action-link(32px)    
@@ -39,9 +55,6 @@ body
 #footer
   position: absolute
   bottom: 0
-  font-size: 18px
-  font-family: Veranda
-  color: #1E434F
   left: 90%
   a img
     border: 0px
